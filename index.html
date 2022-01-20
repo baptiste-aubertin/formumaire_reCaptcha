@@ -6,12 +6,12 @@
     <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
-
 <div class="wrapper">
     <header>Send us a Message</header>
-    <form action="#">
+    <form id="contact" action="#">
         <div class="dbl-field">
             <div class="field">
                 <input type="text" name="name" placeholder="Enter your name">
@@ -32,13 +32,14 @@
             <textarea placeholder="Write your message" name="message"></textarea>
         </div>
         <input type="checkbox" name="honnypot" value="1" style="display:none !important" tabindex="-1" autocomplete="off">
-
         <div class="button-area">
-            <button type="submit">Send Message</button>
+            <button class="g-recaptcha" data-sitekey="6LfT7yUeAAAAAFeS1ze_pVGs6obH_j3KKrqpE_jK" data-callback="captchaSubmit">Submit</button>
             <span></span>
         </div>
+
     </form>
 </div>
+
 
 <script src="script.js"></script>
 

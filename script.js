@@ -1,9 +1,5 @@
 const form = document.querySelector("form");
-
-form.onsubmit = (e)=>{
-    console.log("ic1")
-
-    e.preventDefault();
+function captchaSubmit(data) {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "mail.php", true);
     let formData = new FormData(form);
